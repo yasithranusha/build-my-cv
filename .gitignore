@@ -1,0 +1,66 @@
+# Ignore everything by default
+*
+*/
+
+# But un-ignore (whitelist) specific files and directories we need
+
+# Core CV files
+!my_cv.tex
+!build.sh
+!README.md
+!CLAUDE.md
+!.gitignore
+
+# Content directory and its files
+!content/
+!content/*.tex
+
+# Assets directory and its files
+!assets/
+!assets/*.png
+!assets/*.jpg
+!assets/*.svg
+
+# Documentation
+!LATEX_CHEATSHEET.md
+
+# Keep directory structure
+!.gitkeep
+
+# ==========================================
+# Explicitly ignore LaTeX output files
+# (even if un-ignored above)
+# ==========================================
+
+*.pdf
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# ==========================================
+# Ignore OS and editor files
+# ==========================================
+
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ==========================================
+# Notes:
+# - All generated PDFs are ignored (my_cv.pdf won't be tracked)
+# - LaTeX auxiliary files are ignored
+# - Only source .tex files are tracked
+# - Build script and documentation are tracked
+# ==========================================
